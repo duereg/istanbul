@@ -2,7 +2,6 @@
 
 var assert = require('assert'),
     foo = require('../lib/foo'),
-    bar = require('../lib/bar'),
     shouldFail = !!process.argv[2] && process.argv[2] !== '0';
 
 var r1 = foo(3, true);
