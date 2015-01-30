@@ -1,6 +1,6 @@
 {
   "name": "istanbul",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests and browser tests. Built for scale",
   "keywords": [
     "coverage",
@@ -84,10 +84,10 @@
     "wordwrap": "0.0.x"
   },
   "devDependencies": {
-    "rimraf": "2.2.x",
-    "nodeunit": "0.9.x",
+    "coveralls": "2.x",
     "jshint": "2.5.x",
+    "nodeunit": "0.9.x",
     "requirejs": "2.x",
-    "coveralls": "2.x"
+    "rimraf": "2.2.x"
   }
 }
