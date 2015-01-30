@@ -27,7 +27,9 @@ module.exports = {
             test.equal(false, iOpts.includeAllSources());
             test.equal('./coverage/coverage-baseline.json', iOpts.baselineFile());
             test.deepEqual(['**/node_modules/**'], iOpts.excludes());
-            test.deepEqual(['**/node_modules/**', '**/test/**', '**/tests/**'], iOpts.excludes(true));
+            test.deepEqual(
+              ['**/node_modules/**', '**/test/**', '**/tests/**', '**/spec/**', '**/spec/**'],
+              iOpts.excludes(true));
             test.done();
         },
         "default reporting options should be correct": function (test) {
@@ -104,7 +106,10 @@ module.exports = {
             });
             var iOpts = config.instrumentation;
             test.deepEqual(['**/node_modules/**', '**/vendor/**'], iOpts.excludes());
-            test.deepEqual(['**/node_modules/**', '**/test/**', '**/tests/**', '**/vendor/**'], iOpts.excludes(true));
+            test.deepEqual(
+              ['**/node_modules/**', '**/test/**', '**/tests/**', '**/spec/**', '**/spec/**', '**/vendor/**'],
+              iOpts.excludes(true)
+            );
             test.done();
         },
         "should honor default excludes setting - when not set" : function (test) {
